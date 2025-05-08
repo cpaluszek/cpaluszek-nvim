@@ -23,7 +23,7 @@ rec {
         gitsigns-nvim
         comment-nvim
         which-key-nvim
-        render-markdown
+        render-markdown-nvim
       ];
 
       name = "cpaluszek";
