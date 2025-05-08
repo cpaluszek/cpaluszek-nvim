@@ -10,6 +10,7 @@ local function set_vim_opt()
   vim.opt.swapfile = false
   vim.opt.backup = false
   vim.opt.termguicolors = true
+  vim.opt.signcolumn = "yes"
 end
 
 local function set_vim_keys()
