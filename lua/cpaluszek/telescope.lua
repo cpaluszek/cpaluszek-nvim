@@ -11,6 +11,8 @@ local function init()
     }
   }
 
+  -- TODO: add trouble integration
+
   local options = { noremap = true, silent = true }
   -- Builtin
   vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', options)
