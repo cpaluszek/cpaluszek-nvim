@@ -40,6 +40,7 @@ local function init()
   })
 
   gruvbox.setup({
+    terminal_colors = true,
     transparent_mode = true,
   })
 
