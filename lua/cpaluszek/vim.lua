@@ -1,6 +1,6 @@
 local function set_vim_opt()
   vim.opt.number = true
-  vim.opt.relative_number = true
+  vim.opt.relativenumber = true
   vim.opt.scrolloff = 4
   vim.opt.tabstop = 4
   vim.opt.shiftwidth = 4
