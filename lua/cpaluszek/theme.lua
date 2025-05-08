@@ -78,7 +78,7 @@ local function init()
       },
     }
   })
-  
+  vim.cmd [[colorscheme gruvbox]]
   -- TODO: notify
 end
 
