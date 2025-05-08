@@ -20,7 +20,7 @@ rec {
         lualine-nvim
         gitsigns-nvim
         comment-nvim
-        which-key.nvim
+        which-key-nvim
       ];
 
       name = "cpaluszek";
