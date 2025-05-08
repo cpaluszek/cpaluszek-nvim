@@ -22,7 +22,7 @@ local function on_attach(client, buffer)
 
     local opts = { buffer = buffer, remap = false }
 
-    -- TODO: check 
+    -- TODO: check
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[buffer].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
@@ -34,13 +34,13 @@ local function on_attach(client, buffer)
     -- vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
     -- vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
     -- vim.keymap.set('n', '<leader>wl', function()
-        -- print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+    -- print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     -- end, opts)
     vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
+    vim.keymap.set('n', '<leader>fm', function() vim.lsp.buf.format { async = true } end, opts)
 
     if client.server_capabilities.documentHighlightProvider then
         autocmd_clear { group = augroup_highlight, buffer = buffer }
@@ -67,7 +67,7 @@ local function init()
         gopls = {
             settings = {
                 gopls = {
-                    gofumpt = true;
+                    gofumpt = true,
                 },
             },
         },
@@ -89,7 +89,7 @@ local function init()
         local config = { on_attach = on_attach }
 
         if server_config then
-            for k,v in pairs(server_config) do
+            for k, v in pairs(server_config) do
                 config[k] = v
             end
         end
