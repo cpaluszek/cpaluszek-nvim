@@ -25,11 +25,11 @@ in rec {
 
       # Clean up unnecessary files after installation.
       postInstall = ''
-        rm -rf $out/.envrc
         rm -rf $out/.gitignore
         rm -rf $out/flake.nix
         rm -rf $out/flake.lock
         rm -rf $out/lib
+        rm -rf $out/justfile
       '';
 
       src = ../.;
@@ -83,16 +83,11 @@ in rec {
     };
 
   mkHomeManager = {system}: let
-    # extraConfig = mkExtraConfig;
+    extraConfig = mkExtraConfig;
     extraPackages = mkExtraPackages { inherit system; };
     plugins = mkNeovimPlugins { inherit system; };
   in {
-    inherit extraPackages plugins;
-    extraConfig = ''
-      lua << EOF
-        require 'cpaluszek'.init()
-      EOF
-    '';
+    inherit extraConfig extraPackages plugins;
     defaultEditor = true;
     enable = true;
   };
