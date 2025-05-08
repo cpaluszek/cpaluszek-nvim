@@ -13,7 +13,7 @@ local function init()
 
   local options = { noremap = true, silent = true }
   -- Builtin
-  vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files{ hidden = true }<CR>', options)
+  vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', options)
   vim.keymap.set('n', '<leader>fs', '<CMD>lua require("telescope.builtin").live_grep()<CR>', options)
   vim.keymap.set('n', '<leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', options)
   vim.keymap.set('n', '<leader>fh', '<CMD>lua require("telescope.builtin").help_tags()<CR>', options)
