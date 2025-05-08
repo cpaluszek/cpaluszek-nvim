@@ -1,4 +1,4 @@
-local comment = require 'comment'
+local comment = require 'Comment'
 local gitsigns = require 'gitsigns'
 local lualine = require 'lualine'
 local function init()
