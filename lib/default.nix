@@ -55,11 +55,11 @@ in rec {
   in [
     # language servers
     pkgs.lua-language-server
-    pkgs.gopls
+    # pkgs.gopls
 
     # formatters
-    pkgs.gofumpt
-    pkgs.golines
+    # pkgs.gofumpt
+    # pkgs.golines
   ];
 
   mkExtraConfig = ''
