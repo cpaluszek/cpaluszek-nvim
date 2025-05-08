@@ -3,6 +3,7 @@ local gitsigns = require 'gitsigns'
 local lualine = require 'lualine'
 local tokyonight = require 'tokyonight'
 local catppuccin = require 'catppuccin'
+local gruvbox = require 'gruvbox'
 local themery = require 'themery'
 
 local function init()
@@ -28,8 +29,12 @@ local function init()
 
   tokyonight.setup({
     opts = {
-      tranparent = true,
+      transparent = true,
     },
+  })
+
+  gruvbox.setup({
+    transparent_mode = true,
   })
 
   themery.setup({
