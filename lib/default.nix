@@ -38,16 +38,17 @@ in rec {
     };
 
   mkNeovimPlugins = {system}: let
-    inherit (pkgs) vimPlugins;
+    inherit (pkgs) vimPlugins vimExtraPlugins;
     pkgs = legacyPackages.${system};
     cpaluszek-nvim = mkVimPlugin { inherit system; }; # Points to the plugin built by mkVimPlugin
   in
-    with vimPlugins; [
-      trouble-nvim
+    [
+      vimPlugins.trouble-nvim
+
+      vimExtraPlugins.themery-nvim
 
       # configuration
-      cpaluszek-nvim
-      vimExtraPlugins.themery-nvim
+      vimPlugins.cpaluszek-nvim
     ];
 
   mkExtraPackages = {system}: let
