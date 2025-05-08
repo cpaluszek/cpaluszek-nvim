@@ -13,11 +13,6 @@ local function set_vim_opt()
 end
 
 local function set_vim_keys()
-  vim.keymap.set('n', '<C-h>', '<CMD>wincmd h<CR>', {desc = 'Wincmd left', silent = true})
-  vim.keymap.set('n', '<C-j>', '<CMD>wincmd j<CR>', {desc = 'Wincmd down', silent = true})
-  vim.keymap.set('n', '<C-k>', '<CMD>wincmd k<CR>', {desc = 'Wincmd up', silent = true})
-  vim.keymap.set('n', '<C-l>', '<CMD>wincmd l<CR>', {desc = 'Wincmd right', silent = true})
-
   vim.keymap.set('x', '<leader>p', '\"_dP', {desc = 'Paste selection without adding to buffer', silent = true})
 
   -- copy to sys clipboard
