@@ -1,4 +1,4 @@
-<
+{inputs, pkgs}:
 rec {
   mkVimPlugin = {system}: let
     inherit (pkgs) vimUtils;
