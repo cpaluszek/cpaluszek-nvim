@@ -34,34 +34,36 @@ local function init()
 
   themery.setup({
     livePreview = true,
-    {
-      name = "Catppuccin Mocha",
-      colorscheme = "catppuccin-mocha",
-      before = [[
-        vim.opt.background = "dark"
-      ]]
-    },
-    {
-      name = "Tokyonight",
-      colorscheme = "tokyonight",
-      before = [[
-        vim.opt.background = "dark"  
-      ]]
-    },
-    {
-      name = "Gruvbox Dark",
-      colorscheme = "gruvbox",
-      before = [[
-        vim.opt.background = "dark"  
-      ]]
-    },
-    {
-      name = "Gruvbox Light",
-      colorscheme = "gruvbox",
-      before = [[
-        vim.opt.background = "light"  
-      ]]
-    },
+    themes = {
+      {
+        name = "Catppuccin Mocha",
+        colorscheme = "catppuccin-mocha",
+        before = [[
+          vim.opt.background = "dark"
+        ]]
+      },
+      {
+        name = "Tokyonight",
+        colorscheme = "tokyonight",
+        before = [[
+          vim.opt.background = "dark"  
+        ]]
+      },
+      {
+        name = "Gruvbox Dark",
+        colorscheme = "gruvbox",
+        before = [[
+          vim.opt.background = "dark"  
+        ]]
+      },
+      {
+        name = "Gruvbox Light",
+        colorscheme = "gruvbox",
+        before = [[
+          vim.opt.background = "light"  
+        ]]
+      },
+    }
   })
   
   -- TODO: notify
