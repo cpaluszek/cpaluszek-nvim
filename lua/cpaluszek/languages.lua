@@ -1,7 +1,7 @@
 local lspconfig = require 'lspconfig'
 local treesitter = require 'nvim-treesitter.configs'
 
-local function ini()
+local function init()
     treesitter.setup {
         auto_install = false,
         insure_installed = {},
