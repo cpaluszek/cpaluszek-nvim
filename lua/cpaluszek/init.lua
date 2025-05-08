@@ -1,3 +1,10 @@
--- TODO: add the requires
+local function init()
+  vim.g.mapleader = " "
 
-vim.g.mapleader = " "
+  set nu
+  set rnu
+end
+
+return {
+  init = init,
+}

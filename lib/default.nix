@@ -24,7 +24,7 @@ in rec {
       name = "cpaluszek";
 
       # Clean up unnecessary files after installation.
-      postInstal = ''
+      postInstall = ''
         rm -rf $out/.envrc
         rm -rf $out/.gitignore
         rm -rf $out/flake.nix
@@ -83,11 +83,16 @@ in rec {
     };
 
   mkHomeManager = {system}: let
-    extraConfig = mkExtraConfig;
+    # extraConfig = mkExtraConfig;
     extraPackages = mkExtraPackages { inherit system; };
     plugins = mkNeovimPlugins { inherit system; };
   in {
-    inherit extraConfig extraPackages plugins;
+    inherit extraPackages plugins;
+    extraConfig = ''
+      lua << EOF
+        require 'cpaluszek'.init()
+      EOF
+    '';
     defaultEditor = true;
     enable = true;
   };
