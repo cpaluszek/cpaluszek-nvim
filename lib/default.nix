@@ -62,6 +62,7 @@ in rec {
     # formatters
     # pkgs.gofumpt
     # pkgs.golines
+    pkgs.vimExtraPlugins.themery-nvim
   ];
 
   mkExtraConfig = ''
