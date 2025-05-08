@@ -29,7 +29,7 @@ local function set_vim_keys()
   vim.keymap.set('v', '<leader>d', '\"_d', {desc = 'Delete and copy to sys clipboard'})
 
   -- search and replace
-  vim.keymap.set('n', '<leader>s', ':%s/\\<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>', {descr = 'Search and replace', silent = true})
+  vim.keymap.set('n', '<leader>s', ':%s/\\<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>', {desc = 'Search and replace', silent = true})
 end
 
 local function init()
