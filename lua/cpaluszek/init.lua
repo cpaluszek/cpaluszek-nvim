@@ -1,8 +1,5 @@
 local function init()
-  vim.g.mapleader = " "
-
-  vim.opt.number = true;
-  vim.opt.relativenumber = true;
+  require 'cpaluszek.vim'.init()
 end
 
 return {
