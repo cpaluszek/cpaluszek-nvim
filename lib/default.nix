@@ -19,6 +19,8 @@ in rec {
 
         # Extras
         lualine-nvim
+        gitsigns-nvim
+        comment-nvim
       ];
 
       name = "cpaluszek";
