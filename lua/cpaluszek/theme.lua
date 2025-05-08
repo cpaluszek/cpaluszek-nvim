@@ -6,17 +6,23 @@ local catppuccin = require 'catppuccin'
 local gruvbox = require 'gruvbox'
 local themery = require 'themery'
 local render_markdown = require 'render-markdown'
+local notify = require 'notify'
 
 local function init()
   comment.setup {}
 
   gitsigns.setup {}
-  
+
   lualine.setup({
     options = {
       extensions = { "quickfix", "trouble", "fzf" },
       theme = "auto",
     },
+  })
+
+  notify.setup({
+    render = "wrapped-compact",
+        timeout = 2500,
   })
 
   render_markdown.setup {}

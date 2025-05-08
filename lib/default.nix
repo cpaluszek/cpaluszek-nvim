@@ -1,4 +1,4 @@
-{inputs, pkgs}:
+<
 rec {
   mkVimPlugin = {system}: let
     inherit (pkgs) vimUtils;
@@ -24,6 +24,7 @@ rec {
         comment-nvim
         which-key-nvim
         render-markdown-nvim
+        nvim-notify
       ];
 
       name = "cpaluszek";
