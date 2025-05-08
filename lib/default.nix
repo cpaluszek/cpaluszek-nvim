@@ -1,6 +1,5 @@
-{inputs, pkgs}: let
-  # inherit (pkgs) legacyPackages;
-in rec {
+{inputs, pkgs}:
+rec {
   mkVimPlugin = {system}: let
     inherit (pkgs) vimUtils;
     inherit (vimUtils) buildVimPlugin;
@@ -10,6 +9,7 @@ in rec {
         # Theme
         tokyonight-nvim
         gruvbox-nvim
+        catppuccin-nvim
 
         # Languages
 
