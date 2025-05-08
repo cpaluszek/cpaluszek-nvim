@@ -5,6 +5,7 @@ local tokyonight = require 'tokyonight'
 local catppuccin = require 'catppuccin'
 local gruvbox = require 'gruvbox'
 local themery = require 'themery'
+local render_markdown = require 'render-markdown'
 
 local function init()
   comment.setup {}
@@ -18,6 +19,7 @@ local function init()
     },
   })
 
+  render_markdown.setup {}
 
   -- Themes
   catppuccin.setup({

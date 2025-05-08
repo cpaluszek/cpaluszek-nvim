@@ -12,6 +12,8 @@ rec {
         catppuccin-nvim
 
         # Languages
+        nvim-lspconfig
+        nvim-treesitter.withAllGrammars
 
         # Navigation
         telescope-nvim
@@ -21,6 +23,7 @@ rec {
         gitsigns-nvim
         comment-nvim
         which-key-nvim
+        render-makrdown
       ];
 
       name = "cpaluszek";
