@@ -47,6 +47,7 @@ in rec {
 
       # configuration
       cpaluszek-nvim
+      vimExtraPlugins.themery-nvim
     ];
 
   mkExtraPackages = {system}: let
@@ -62,7 +63,6 @@ in rec {
     # formatters
     # pkgs.gofumpt
     # pkgs.golines
-    pkgs.vimExtraPlugins.themery-nvim
   ];
 
   mkExtraConfig = ''
