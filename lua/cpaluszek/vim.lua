@@ -1,26 +1,15 @@
 local function set_vim_opt()
-  local settings = {
-    number = true,
-    relative_number = true,
-    
-    scrolloff = 4,
-    
-    tabstop = 4,
-    shiftwidth = 4,
-    expandtab = true,
-    list = true,
-
-    wrap = false,
-
-    swapfile = false,
-    backup = false,
-
-    termguicolors = true,
-  }
-
-  for k, v in pairs(settings) do
-    vim.opt[k] = v
-  end
+  vim.opt.number = true,
+  vim.opt.relative_number = true,
+  vim.opt.scrolloff = 4,
+  vim.opt.tabstop = 4,
+  vim.opt.shiftwidth = 4,
+  vim.opt.expandtab = true,
+  vim.opt.list = true,
+  vim.opt.wrap = false,
+  vim.opt.swapfile = false,
+  vim.opt.backup = false,
+  vim.opt.termguicolors = true,
 end
 
 local function set_vim_keys()
