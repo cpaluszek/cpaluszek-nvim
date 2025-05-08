@@ -28,9 +28,7 @@ local function init()
   })
 
   tokyonight.setup({
-    opts = {
-      transparent = true,
-    },
+    transparent = true,
   })
 
   gruvbox.setup({
