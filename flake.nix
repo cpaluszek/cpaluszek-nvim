@@ -3,9 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixneovimplugins.url = "github:NixNeovim/NixNeovimPlugins";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, nixneovimplugins }:
     let
       system = "x86_64-linux";
     in {
@@ -15,6 +16,10 @@
         default = self.lib.mkVimPlugin { inherit system; };
         neovim = self.lib.mkNeovim { inherit system; };
       };
+
+      nixpkgs.overlays = [
+        nixneovimplugins.overlays.default
+      ];
 
       apps.${system} = {
         nvim = {
