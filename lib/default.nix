@@ -1,10 +1,9 @@
-{inputs}: let
-  inherit (inputs.nixpkgs) legacyPackages;
+{inputs, pkgs}: let
+  # inherit (pkgs) legacyPackages;
 in rec {
   mkVimPlugin = {system}: let
     inherit (pkgs) vimUtils;
     inherit (vimUtils) buildVimPlugin;
-    pkgs = legacyPackages.${system};
   in
     buildVimPlugin {
       dependencies = with pkgs.vimPlugins; [
@@ -38,27 +37,26 @@ in rec {
     };
 
   mkNeovimPlugins = {system}: let
-    inherit (pkgs) vimPlugins vimExtraPlugins;
-    pkgs = legacyPackages.${system};
+    inherit (pkgs) vimPlugins;
     cpaluszek-nvim = mkVimPlugin { inherit system; }; # Points to the plugin built by mkVimPlugin
   in
     [
       vimPlugins.trouble-nvim
 
-      vimExtraPlugins.themery-nvim
+      pkgs.vimExtraPlugins.themery-nvim
 
       # configuration
-      vimPlugins.cpaluszek-nvim
+      cpaluszek-nvim
     ];
 
   mkExtraPackages = {system}: let
-    pkgs = import inputs.nixpkgs {
+    pkgsWithConfig = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
   in [
     # language servers
-    pkgs.lua-language-server
+    pkgsWithConfig.lua-language-server
     # pkgs.gopls
 
     # formatters
@@ -75,7 +73,6 @@ in rec {
   mkNeovim = {system}: let
     inherit (pkgs) lib neovim;
     extraPackages = mkExtraPackages { inherit system; };
-    pkgs = legacyPackages.${system};
     start = mkNeovimPlugins { inherit system; };
   in
     neovim.override {
