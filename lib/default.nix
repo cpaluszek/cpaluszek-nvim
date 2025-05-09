@@ -17,6 +17,7 @@ rec {
 
         # Navigation
         telescope-nvim
+        vim-tmux-navigator
 
         # Extras
         lualine-nvim

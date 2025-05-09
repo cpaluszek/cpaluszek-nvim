@@ -14,10 +14,10 @@ local function set_vim_opt()
 end
 
 local function set_vim_keys()
-  vim.keymap.set('n', '<leader>h', '<CMD>wincmd h<CR>', { noremap = false, silent = true })
-  vim.keymap.set('n', '<leader>j', '<CMD>wincmd j<CR>', { noremap = false, silent = true })
-  vim.keymap.set('n', '<leader>k', '<CMD>wincmd k<CR>', { noremap = false, silent = true })
-  vim.keymap.set('n', '<leader>l', '<CMD>wincmd l<CR>', { noremap = false, silent = true })
+  -- vim.keymap.set('n', '<leader>h', '<CMD>wincmd h<CR>', { noremap = false, silent = true })
+  -- vim.keymap.set('n', '<leader>j', '<CMD>wincmd j<CR>', { noremap = false, silent = true })
+  -- vim.keymap.set('n', '<leader>k', '<CMD>wincmd k<CR>', { noremap = false, silent = true })
+  -- vim.keymap.set('n', '<leader>l', '<CMD>wincmd l<CR>', { noremap = false, silent = true })
 
   vim.keymap.set('x', '<leader>p', '\"_dP', {desc = 'Paste selection without adding to buffer', silent = true})
 
