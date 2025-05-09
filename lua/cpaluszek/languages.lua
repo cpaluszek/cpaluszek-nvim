@@ -3,6 +3,7 @@ local treesitter = require 'nvim-treesitter.configs'
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 local cmp_nvim_lsp = require 'cmp_nvim_lsp'
+local fidget = require 'fidget'
 
 local function autocmd(args)
   local event = args[1]
@@ -49,6 +50,8 @@ local function on_attach(client, buffer)
 end
 
 local function init()
+  fidget.setup{}
+
   -- Completions
   cmp.setup({
     snippet = {

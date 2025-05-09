@@ -36,6 +36,7 @@ rec {
         render-markdown-nvim
         nvim-notify
         mini-pairs
+        fidget-nvim
       ];
 
       name = "cpaluszek";
