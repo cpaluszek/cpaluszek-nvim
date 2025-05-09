@@ -12,6 +12,7 @@ local function init()
   }
 
   -- TODO: add trouble integration
+  telescope.load_extension('notify')
 
   local options = { noremap = true, silent = true }
   -- Builtin
@@ -26,7 +27,9 @@ local function init()
   vim.keymap.set('n', '<leader>lsi', '<CMD>lua require("telescope.builtin").lsp_implementations{}<CR>', options)
   vim.keymap.set('n', '<leader>lsl', '<CMD>lua require("telescope.builtin").lsp_code_actions{}<CR>', options)
   vim.keymap.set('n', '<leader>lst', '<CMD>lua require("telescope.builtin").lsp_type_definitions{}<CR>', options)
-  -- TODO: notify telescope extension
+
+  -- Extensions
+  vim.keymap.set('n', '<leader>fn', '<CMD>lua require("telescope").extensions.notify.notify()<CR>', options)
 end
 
 return {
