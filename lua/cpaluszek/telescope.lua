@@ -1,7 +1,8 @@
 local telescope = require 'telescope'
 
 local function init()
-  local trouble = require('trouble.sources.telescope')
+  local trouble_open = require('trouble.sources.telescope').open
+  -- local trouble_add = require('trouble.sources.telescope').add
 
   telescope.setup = ({
     pickers = {
@@ -14,10 +15,10 @@ local function init()
     defaults = {
       mappings = {
         i = {
-          ["<C-x>"] = trouble.open,
+          ["<C-x>"] = trouble_open,
         },
         n = {
-          ["<C-x>"] = trouble.open,
+          ["<C-x>"] = trouble_open,
         },
       },
     },
