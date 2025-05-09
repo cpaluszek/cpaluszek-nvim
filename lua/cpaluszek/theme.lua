@@ -50,7 +50,7 @@ local function init()
     transparent_mode = true,
   })
 
-  vim.keymap.set('n', '<leader>t', '<CMD>Themery<CR>', {desc = 'Themery'})
+  vim.keymap.set('n', '<leader>tm', '<CMD>Themery<CR>', {desc = 'Themery'})
   themery.setup({
     livePreview = true,
     themes = {

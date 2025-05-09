@@ -15,7 +15,8 @@ local function init()
 
   local options = { noremap = true, silent = true }
 
-  vim.keymap.set('n', '<C-x>', '<CMD>lua require("trouble.source.telescope").open()<CR>', options)
+  vim.keymap.set('n', '<leader>to', '<CMD>lua require("trouble.source.telescope").open<CR>', options)
+  vim.keymap.set('n', '<leader>ta', '<CMD>lua require("trouble.source.telescope").add<CR>', options)
 
   -- Builtin
   vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', options)
