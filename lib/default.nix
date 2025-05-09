@@ -17,6 +17,7 @@ rec {
 
         # Navigation
         telescope-nvim
+        trouble-nvim
         vim-tmux-navigator
 
         # Extras
@@ -48,7 +49,6 @@ rec {
     cpaluszek-nvim = mkVimPlugin { inherit system; }; # Points to the plugin built by mkVimPlugin
   in
     [
-      vimPlugins.trouble-nvim
       vimPlugins.nvim-web-devicons
 
       pkgs.vimExtraPlugins.themery-nvim
