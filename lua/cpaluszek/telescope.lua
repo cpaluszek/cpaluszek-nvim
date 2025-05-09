@@ -4,14 +4,14 @@ local function init()
   local trouble_open = require('trouble.sources.telescope').open
   -- local trouble_add = require('trouble.sources.telescope').add
 
-  telescope.setup = ({
+  telescope.setup ({
     defaults = {
       mappings = {
         i = {
-          ["<C-t>"] = trouble_open,
+          ["<C-x>"] = trouble_open,
         },
         n = {
-          ["<C-t>"] = trouble_open,
+          ["<C-x>"] = trouble_open,
         },
       },
     },
