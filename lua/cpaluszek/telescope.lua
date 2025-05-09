@@ -11,10 +11,12 @@ local function init()
     }
   }
 
-  -- TODO: add trouble integration
   telescope.load_extension('notify')
 
   local options = { noremap = true, silent = true }
+
+  vim.keymap.set('n', '<C-x>', '<CMD>lua require("trouble.source.telescope").open()<CR>', options)
+
   -- Builtin
   vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', options)
   vim.keymap.set('n', '<leader>fs', '<CMD>lua require("telescope.builtin").live_grep()<CR>', options)
