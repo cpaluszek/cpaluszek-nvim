@@ -8,6 +8,7 @@ local themery = require 'themery'
 local render_markdown = require 'render-markdown'
 local notify = require 'notify'
 local mini_pairs = require 'mini.pairs'
+local trouble = require 'trouble'
 
 local function init()
   comment.setup {}
@@ -20,6 +21,8 @@ local function init()
       theme = "auto",
     },
   })
+
+  trouble.setup {}
 
   notify.setup({
     render = "wrapped-compact",
