@@ -3,7 +3,7 @@ local telescope = require 'telescope'
 local function init()
   local trouble = require('trouble.sources.telescope')
 
-  telescope.setup = {
+  telescope.setup = ({
     pickers = {
       find_files = {
         find_command = {
@@ -11,7 +11,7 @@ local function init()
         },
       },
     },
-    default = {
+    defaults = {
       mappings = {
         i = {
           ["<C-x>"] = trouble.open,
@@ -21,7 +21,7 @@ local function init()
         },
       },
     },
-  }
+  })
 
   telescope.load_extension('notify')
 
