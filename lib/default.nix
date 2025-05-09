@@ -15,6 +15,14 @@ rec {
         nvim-lspconfig
         nvim-treesitter.withAllGrammars
 
+        # Completions
+        nvim-cmp
+        cmp-nvim-lsp
+        cmp-buffer
+        cmp-path
+        cmo-cmdline
+        luasnip
+
         # Navigation
         telescope-nvim
         trouble-nvim
