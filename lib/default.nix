@@ -20,7 +20,7 @@ rec {
         cmp-nvim-lsp
         cmp-buffer
         cmp-path
-        cmo-cmdline
+        cmp-cmdline
         luasnip
 
         # Navigation
