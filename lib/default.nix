@@ -63,9 +63,11 @@ rec {
   in [
     # language servers
     pkgsWithConfig.lua-language-server
+    pkgsWithConfig.nil
     # pkgs.gopls
 
     # formatters
+    pkgsWithConfig.alejandra
     # pkgs.gofumpt
     # pkgs.golines
   ];

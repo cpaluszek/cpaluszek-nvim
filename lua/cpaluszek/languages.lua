@@ -90,6 +90,13 @@ local function init()
                 },
             },
         },
+        nil_ls = {
+            settings = {
+                ['nil'] = {
+                    formatting = { command = { 'alejandra' } },
+                },
+            },
+        },
     }
 
     for server, server_config in pairs(language_servers) do
