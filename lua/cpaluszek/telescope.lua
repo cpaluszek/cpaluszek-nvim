@@ -5,13 +5,6 @@ local function init()
   -- local trouble_add = require('trouble.sources.telescope').add
 
   telescope.setup = ({
-    pickers = {
-      find_files = {
-        find_command = {
-          'rg', '--files', '-L', '--hidden', '--glob', '!**.git/*'
-        },
-      },
-    },
     defaults = {
       mappings = {
         i = {
@@ -19,6 +12,13 @@ local function init()
         },
         n = {
           ["<C-x>"] = trouble_open,
+        },
+      },
+    },
+    pickers = {
+      find_files = {
+        find_command = {
+          'rg', '--files', '-L', '--hidden', '--glob', '!**.git/*'
         },
       },
     },
