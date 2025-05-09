@@ -1,6 +1,8 @@
 local telescope = require 'telescope'
 
 local function init()
+  local trouble = require('trouble.sources.telescope')
+
   telescope.setup = {
     pickers = {
       find_files = {
@@ -8,15 +10,22 @@ local function init()
           'rg', '--files', '-L', '--hidden', '--glob', '!**.git/*'
         },
       },
-    }
+    },
+    default = {
+      mappings = {
+        i = {
+          ["<C-x>"] = trouble.open,
+        },
+        n = {
+          ["<C-x>"] = trouble.open,
+        },
+      },
+    },
   }
 
   telescope.load_extension('notify')
 
   local options = { noremap = true, silent = true }
-
-  vim.keymap.set('n', '<leader>to', '<CMD>lua require("trouble.source.telescope").open<CR>', options)
-  vim.keymap.set('n', '<leader>ta', '<CMD>lua require("trouble.source.telescope").add<CR>', options)
 
   -- Builtin
   vim.keymap.set('n', '<leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', options)
