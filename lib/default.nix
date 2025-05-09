@@ -26,6 +26,7 @@ rec {
         which-key-nvim
         render-markdown-nvim
         nvim-notify
+        mini-pairs
       ];
 
       name = "cpaluszek";
@@ -48,6 +49,7 @@ rec {
   in
     [
       vimPlugins.trouble-nvim
+      vimPlugins.nvim-web-devicons
 
       pkgs.vimExtraPlugins.themery-nvim
 
