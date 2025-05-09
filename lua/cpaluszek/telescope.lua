@@ -8,10 +8,10 @@ local function init()
     defaults = {
       mappings = {
         i = {
-          ["<C-x>"] = trouble_open,
+          ["<C-t>"] = trouble_open,
         },
         n = {
-          ["<C-x>"] = trouble_open,
+          ["<C-t>"] = trouble_open,
         },
       },
     },
