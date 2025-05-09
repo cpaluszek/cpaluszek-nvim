@@ -7,6 +7,7 @@ local gruvbox = require 'gruvbox'
 local themery = require 'themery'
 local render_markdown = require 'render-markdown'
 local notify = require 'notify'
+local mini_pairs = require 'mini.pairs'
 
 local function init()
   comment.setup {}
@@ -24,6 +25,8 @@ local function init()
     render = "wrapped-compact",
         timeout = 2500,
   })
+
+  mini_pairs.setup {}
 
   render_markdown.setup {}
 
