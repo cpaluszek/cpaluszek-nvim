@@ -9,6 +9,7 @@ local render_markdown = require 'render-markdown'
 local notify = require 'notify'
 local mini_pairs = require 'mini.pairs'
 local trouble = require 'trouble'
+local neo_tree = require 'neo-tree'
 
 local function init()
   comment.setup {}
@@ -32,6 +33,20 @@ local function init()
   mini_pairs.setup {}
 
   render_markdown.setup {}
+
+  vim.keymap.set('n', '<C-b>', '<CMD>Neotree toggle<CR>', {desc = 'Neotree'})
+  neo_tree.setup({
+    close_if_last_window = true,
+    enable_diagnostics = true,
+    enable_git_status = true,
+    filesystem = {
+      hijack_netrw_behavior = "open_current",
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = true,
+      },
+    },
+  })
 
   -- Themes
   catppuccin.setup({
