@@ -29,6 +29,7 @@ rec {
         vim-tmux-navigator
 
         # Extras
+        nvim-colorizer-lua
         lualine-nvim
         gitsigns-nvim
         comment-nvim

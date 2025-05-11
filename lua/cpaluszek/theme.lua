@@ -1,3 +1,4 @@
+local colorizer = require 'colorizer'
 local comment = require 'Comment'
 local gitsigns = require 'gitsigns'
 local lualine = require 'lualine'
@@ -12,6 +13,8 @@ local trouble = require 'trouble'
 local neo_tree = require 'neo-tree'
 
 local function init()
+  colorizer.setup {}
+
   comment.setup {}
 
   gitsigns.setup {}
