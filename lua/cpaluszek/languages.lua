@@ -50,6 +50,18 @@ local function on_attach(client, buffer)
 end
 
 local function init()
+  local indent_group = vim.api.nvim_create_augroup("custom_indent_settings", {clear = true})
+
+  vim.api.nvim_create_autocmd("FileType", {
+    group = indent_group,
+    pattern = {"nix", "yaml", "yml", "dockerfile", "docker-compose"},
+    callback = function()
+       vim.opt_local.tabstop = 2
+       vim.opt_local.shiftwidth = 2
+       vim.opt_local.expandtab = true
+    end
+  })
+
   fidget.setup{}
 
   -- Completions
