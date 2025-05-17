@@ -77,12 +77,12 @@ rec {
     # language servers
     pkgsWithConfig.lua-language-server
     pkgsWithConfig.nil
-    # pkgs.gopls
+    pkgs.gopls
 
     # formatters
     pkgsWithConfig.alejandra
-    # pkgs.gofumpt
-    # pkgs.golines
+    pkgs.gofumpt
+    pkgs.golines
   ];
 
   mkExtraConfig = ''
