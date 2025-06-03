@@ -1,6 +1,8 @@
 local obsidian = require 'obsidian'
 
 local function init()
+  vim.opt.conceallevel=1
+
   obsidian.setup({
     workspaces = {
       {
