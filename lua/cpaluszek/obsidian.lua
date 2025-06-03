@@ -2,6 +2,11 @@ local obsidian = require 'obsidian'
 
 local function init()
   obsidian.setup({
+    workspaces = {
+      name = "MyObsidian",
+      path = "~/Documents/MyObsidian",
+    },
+
     daily_notes = {
       folder = "Daily Notes",
       template = nil,
