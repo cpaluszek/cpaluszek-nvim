@@ -39,6 +39,7 @@ rec {
         mini-pairs
         fidget-nvim
         neo-tree-nvim
+        obsidian-nvim
       ];
 
       name = "cpaluszek";
