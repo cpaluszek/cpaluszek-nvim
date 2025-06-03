@@ -3,8 +3,10 @@ local obsidian = require 'obsidian'
 local function init()
   obsidian.setup({
     workspaces = {
-      name = "MyObsidian",
-      path = "~/Documents/MyObsidian",
+      {
+        name = "MyObsidian",
+        path = "~/Documents/MyObsidian",
+      },
     },
 
     daily_notes = {
